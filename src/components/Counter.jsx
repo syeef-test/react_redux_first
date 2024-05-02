@@ -7,19 +7,18 @@ const Counter = () => {
   const toggleCounterHandler = () => {};
 
   const incrementHandler = () => {
-    dispatch({ type: "incrementby2" });
+    dispatch({ type: "increment", amount: 2 });
   };
 
   const decrementHandler = () => {
-    dispatch({ type: "decrementby2" });
+    dispatch({ type: "decrement", amount: 2 });
   };
 
-  const incrementBy5Handler = () => {
-    dispatch({ type: "incrementby5" });
+  const increaseHandler = () => {
+    dispatch({ type: "increase", amount: 5 });
   };
-
-  const decrementBy5Handler = () => {
-    dispatch({ type: "decrementby5" });
+  const decreaseHandler = () => {
+    dispatch({ type: "decrease", amount: 5 });
   };
 
   return (
@@ -29,8 +28,8 @@ const Counter = () => {
       <div>
         <button onClick={incrementHandler}>Increment</button>
         <button onClick={decrementHandler}>Decrement</button>
-        <button onClick={incrementBy5Handler}>Increment By 5</button>
-        <button onClick={decrementBy5Handler}>Decrement By 5</button>
+        <button onClick={increaseHandler}>Increment By 5</button>
+        <button onClick={decreaseHandler}>Decrement By 5</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>
